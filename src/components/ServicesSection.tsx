@@ -6,7 +6,7 @@ const ServicesSection = () => {
     {
       icon: BarChart3,
       title: "Automatización Avanzada de Reportes",
-      description: "Transforma datos dispersos en reportes inteligentes y automatizados. Nuestros agentes de IA recopilan, analizan y presentan información de múltiples fuentes en tiempo real.",
+      description: "Automatización de reportes estructurados con integración de datos, validación mínima y conexión a plataformas.",
       features: [
         "Reportes automáticos periódicos",
         "Integración de múltiples fuentes de datos",
@@ -17,7 +17,7 @@ const ServicesSection = () => {
     {
       icon: Search,
       title: "Deep Research con Agentes Inteligentes",
-      description: "Investigación profunda y análisis de mercado automatizado. Nuestros agentes especializados realizan investigaciones exhaustivas y generan insights accionables.",
+      description: "Investigación profunda usando AI con acceso a documentos internos y la web, respuestas actualizadas y referenciadas.",
       features: [
         "Análisis de competencia automatizado",
         "Investigación de mercado inteligente",
@@ -27,8 +27,8 @@ const ServicesSection = () => {
     },
     {
       icon: Database,
-      title: "Análisis y Búsqueda Inteligente (RAG)",
-      description: "Sistemas de búsqueda semántica que permiten consultar tu base de conocimiento empresarial de forma natural y obtener respuestas precisas y contextualizadas.",
+      title: "Análisis y Búsqueda Inteligente Multiplataforma (RAG)",
+      description: "Análisis de documentos no estructurados y generación de respuestas integradas, precisas y con contexto.",
       features: [
         "Búsqueda semántica en documentos",
         "Base de conocimiento inteligente",
@@ -38,7 +38,7 @@ const ServicesSection = () => {
     },
     {
       icon: Cog,
-      title: "Integración Avanzada de Procesos",
+      title: "Integración Avanzada de AI",
       description: "Conectamos y automatizamos flujos de trabajo complejos entre diferentes plataformas y sistemas, creando procesos fluidos y eficientes.",
       features: [
         "Automatización de flujos de trabajo",
@@ -54,7 +54,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-text-primary mb-6">
-            ¿Por qué elegirnos?
+            Servicios
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             Especializamos en soluciones de IA que realmente transforman la operación de tu negocio
