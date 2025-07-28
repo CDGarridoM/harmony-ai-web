@@ -12,7 +12,6 @@ const Header = () => {
     { label: "Servicios", href: "#servicios" },
     { label: "Casos Aplicados", href: "#casos-aplicados" },
     { label: "Contacto", href: "#contacto" },
-    { label: "Demo", href: "#demo" },
   ];
 
   return (

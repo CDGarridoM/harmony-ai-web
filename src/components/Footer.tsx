@@ -55,11 +55,6 @@ const Footer = () => {
                   Contacto
                 </a>
               </li>
-              <li>
-                <a href="#demo" className="text-gray-300 hover:text-white transition-colors">
-                  Demo
-                </a>
-              </li>
             </ul>
           </div>
 
