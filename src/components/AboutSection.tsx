@@ -27,7 +27,7 @@ const AboutSection = () => {
           <h2 className="text-4xl font-bold text-text-primary mb-6">
             Nosotros
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">Expertos en automatización empresarial con IA que transforman la manera de trabajar. Somos expertos en diseño e implementación de flujos de automatización basados en Generative AI y agentes inteligentes. Adaptamos la tecnología más avanzada a las necesidades prácticas de tu empresa, logrando resultados concretos en optimización y automatización.</p>
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto text-justify">Expertos en automatización empresarial con IA que transforman la manera de trabajar. Somos expertos en diseño e implementación de flujos de automatización basados en IA Generativa y agentes inteligentes. Adaptamos la tecnología más avanzada a las necesidades prácticas de tu empresa, logrando resultados concretos en optimización y automatización.</p>
         </div>
 
         {/* Main Content Grid */}
@@ -90,7 +90,7 @@ const AboutSection = () => {
                   
                   <div>
                     <h6 className="font-semibold text-text-primary mb-3">Experiencia Internacional:</h6>
-                    <p className="text-text-secondary leading-relaxed">
+                    <p className="text-text-secondary leading-relaxed text-justify">
                       Consultoría internacional en automatización financiera en Europa y aplicación de AI para la optimización operativa. Especialista en analítica, procesos, finanzas, reporting y automatización.
                     </p>
                   </div>
