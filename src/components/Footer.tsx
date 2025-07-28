@@ -36,18 +36,28 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#servicios" className="text-gray-300 hover:text-white transition-colors">
-                  Servicios
-                </a>
-              </li>
-              <li>
                 <a href="#nosotros" className="text-gray-300 hover:text-white transition-colors">
                   Nosotros
                 </a>
               </li>
               <li>
+                <a href="#servicios" className="text-gray-300 hover:text-white transition-colors">
+                  Servicios
+                </a>
+              </li>
+              <li>
+                <a href="#casos-aplicados" className="text-gray-300 hover:text-white transition-colors">
+                  Casos Aplicados
+                </a>
+              </li>
+              <li>
                 <a href="#contacto" className="text-gray-300 hover:text-white transition-colors">
                   Contacto
+                </a>
+              </li>
+              <li>
+                <a href="#demo" className="text-gray-300 hover:text-white transition-colors">
+                  Demo
                 </a>
               </li>
             </ul>
@@ -74,7 +84,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-gray-300">+52 55 1234 5678</span>
+                <span className="text-gray-300">+51 944 567 647</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-primary" />

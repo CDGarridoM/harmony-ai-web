@@ -88,7 +88,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="font-medium text-text-primary">Teléfono</p>
-                      <p className="text-text-secondary">+52 55 1234 5678</p>
+                      <p className="text-text-secondary">+51 944 567 647</p>
                     </div>
                   </div>
 
@@ -113,7 +113,7 @@ const ContactSection = () => {
                     Chatea directamente con nosotros para una respuesta rápida
                   </p>
                   <a
-                    href={`https://wa.me/5255123456788?text=${whatsappMessage}`}
+                    href={`https://wa.me/32456386409?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block"

@@ -4,10 +4,6 @@ import { Award, Users, Target, Lightbulb } from "lucide-react";
 import founderImage from "@/assets/carlos-garrido-founder.jpg";
 const AboutSection = () => {
   const values = [{
-    icon: Target,
-    title: "Transparencia",
-    description: "Procesos claros y comunicación directa en cada proyecto"
-  }, {
     icon: Award,
     title: "Mejores prácticas",
     description: "Implementamos estándares internacionales de calidad"
@@ -31,7 +27,7 @@ const AboutSection = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Left side - Founder Image */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative">
@@ -48,9 +44,6 @@ const AboutSection = () => {
 
           {/* Right side - Content */}
           <div className="space-y-8">
-            {/* ¿Quiénes somos? */}
-            
-
             {/* Conoce al Fundador */}
             <Card className="bg-surface-card border-0 shadow-card">
               <CardContent className="p-8">
@@ -58,9 +51,22 @@ const AboutSection = () => {
                   Conoce al Fundador
                 </h4>
                 <div className="space-y-6">
-                  <div>
-                    <h5 className="font-bold text-text-primary text-xl mb-2">Carlos Garrido</h5>
-                    <p className="text-primary font-medium">Economista & Máster en Information Management</p>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h5 className="font-bold text-text-primary text-xl mb-2">Carlos Garrido</h5>
+                      <p className="text-primary font-medium">Economista & Máster en Information Management</p>
+                    </div>
+                    <a 
+                      href="https://www.linkedin.com/in/cdgm/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-3 bg-[#0077B5] text-white rounded-lg hover:bg-[#005885] transition-colors"
+                      aria-label="LinkedIn de Carlos Garrido"
+                    >
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </a>
                   </div>
                   
                   <div className="grid sm:grid-cols-2 gap-6">
@@ -108,7 +114,7 @@ const AboutSection = () => {
           
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {values.map((value, index) => {
           const IconComponent = value.icon;
           return <Card key={index} className="group hover:shadow-hero transition-all duration-smooth hover:-translate-y-2 border-0 bg-surface-card text-center">

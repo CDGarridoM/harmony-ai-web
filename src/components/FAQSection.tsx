@@ -25,6 +25,41 @@ const FAQSection = () => {
     question: "¿Qué diferencia a Armonía Digital IA de otras consultoras?",
     answer: "Nuestra ventaja diferencial está en la combinación de experiencia técnica profunda en IA, conocimiento empresarial práctico, y enfoque en resultados medibles. No vendemos tecnología por tecnología, sino soluciones que realmente transforman operaciones y generan valor tangible para tu negocio."
   }];
-  return;
+  
+  return (
+    <section className="py-20 bg-surface-light">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-text-primary mb-6">
+            Preguntas Frecuentes
+          </h2>
+          <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+            Respuestas a las consultas más comunes sobre nuestros servicios de automatización con IA
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="bg-surface-card border-0 rounded-lg shadow-card overflow-hidden"
+              >
+                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-surface-light transition-colors">
+                  <span className="text-lg font-medium text-text-primary pr-4">
+                    {faq.question}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="px-8 pb-6 text-text-secondary leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  );
 };
 export default FAQSection;

@@ -1,8 +1,9 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { CheckCircle, TrendingUp, Clock, Users, Target } from "lucide-react";
 import automationImage from "@/assets/automation-process.jpg";
 const BenefitsSection = () => {
-  const benefits = ["Ahorro de tiempo y recursos significativo", "Mayor precisión en reportes y análisis", "Menos tareas repetitivas para tu equipo", "Resultados medibles y transparentes", "Escalabilidad automática de procesos", "Reducción de errores humanos", "Acceso 24/7 a información actualizada", "ROI medible desde el primer mes"];
+  const benefits = ["Ahorro de tiempo y recursos significativo", "Mayor consistencia en calidad de reporte y análisis", "Menos tareas manuales y repetitivas para tu equipo", "Unifica la base de datos", "Escalabilidad automática de procesos", "Reducción de errores humanos", "Acceso 24/7 a información actualizada", "ROI medible desde el primer mes"];
   const stats = [{
     value: "85%",
     label: "Reducción en tiempo de reportes",
@@ -56,6 +57,14 @@ const BenefitsSection = () => {
                     <div className="text-sm text-text-secondary">{stat.label}</div>
                   </div>;
             })}
+            </div>
+
+            {/* CTA Button */}
+            <div className="pt-8">
+              <Button size="lg" className="bg-gradient-ai text-white hover:opacity-90 transition-all duration-smooth shadow-hero">
+                <Target className="w-5 h-5 mr-2" />
+                Inspírate en: Casos Aplicados
+              </Button>
             </div>
           </div>
 
