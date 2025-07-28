@@ -1,32 +1,24 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search, PenTool, Rocket, HeartHandshake } from "lucide-react";
-
 const ProcessSection = () => {
-  const steps = [
-    {
-      icon: Search,
-      title: "1. Diagnóstico",
-      description: "Analizamos tus procesos actuales, identificamos oportunidades de automatización y definimos objetivos claros y medibles."
-    },
-    {
-      icon: PenTool,
-      title: "2. Diseño Personalizado",
-      description: "Creamos una solución a medida utilizando las mejores tecnologías de IA, adaptada específicamente a tu industria y necesidades."
-    },
-    {
-      icon: Rocket,
-      title: "3. Implementación Ágil",
-      description: "Desarrollamos e implementamos la solución de forma iterativa, con entregas frecuentes y retroalimentación continua."
-    },
-    {
-      icon: HeartHandshake,
-      title: "4. Empoderamiento y Soporte",
-      description: "Capacitamos a tu equipo y proporcionamos soporte continuo para garantizar el éxito a largo plazo de la implementación."
-    }
-  ];
-
-  return (
-    <section id="nosotros" className="py-20 bg-surface-light">
+  const steps = [{
+    icon: Search,
+    title: "1. Diagnóstico",
+    description: "Analizamos tus procesos actuales, identificamos oportunidades de automatización y definimos objetivos claros y medibles."
+  }, {
+    icon: PenTool,
+    title: "2. Diseño Personalizado",
+    description: "Creamos una solución a medida utilizando las mejores tecnologías de IA, adaptada específicamente a tu industria y necesidades."
+  }, {
+    icon: Rocket,
+    title: "3. Implementación Ágil",
+    description: "Desarrollamos e implementamos la solución de forma iterativa, con entregas frecuentes y retroalimentación continua."
+  }, {
+    icon: HeartHandshake,
+    title: "4. Empoderamiento y Soporte",
+    description: "Capacitamos a tu equipo y proporcionamos soporte continuo para garantizar el éxito a largo plazo de la implementación."
+  }];
+  return <section id="nosotros" className="py-20 bg-surface-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-text-primary mb-6">
@@ -39,16 +31,10 @@ const ProcessSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => {
-            const IconComponent = step.icon;
-            return (
-              <Card 
-                key={index} 
-                className="group hover:shadow-hero transition-all duration-smooth hover:-translate-y-2 border-0 bg-surface-card relative overflow-hidden"
-              >
+          const IconComponent = step.icon;
+          return <Card key={index} className="group hover:shadow-hero transition-all duration-smooth hover:-translate-y-2 border-0 bg-surface-card relative overflow-hidden">
                 {/* Step connector line for desktop */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-ai-blue-light z-10"></div>
-                )}
+                {index < steps.length - 1 && <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-ai-blue-light z-10"></div>}
                 
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto p-4 bg-gradient-ai rounded-full w-fit mb-4 group-hover:scale-110 transition-transform duration-smooth">
@@ -64,23 +50,15 @@ const ProcessSection = () => {
                     {step.description}
                   </p>
                 </CardContent>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
 
         {/* Additional Info */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center space-x-2 bg-surface-card px-6 py-3 rounded-full shadow-card">
-            <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-            <span className="text-text-secondary font-medium">
-              Proceso ágil con entregas en 2-4 semanas
-            </span>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProcessSection;

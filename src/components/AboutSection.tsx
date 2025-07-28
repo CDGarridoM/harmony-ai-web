@@ -2,42 +2,32 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Users, Target, Lightbulb } from "lucide-react";
 import founderImage from "@/assets/carlos-garrido-founder.jpg";
-
 const AboutSection = () => {
-  const values = [
-    {
-      icon: Target,
-      title: "Transparencia",
-      description: "Procesos claros y comunicación directa en cada proyecto"
-    },
-    {
-      icon: Award,
-      title: "Mejores prácticas",
-      description: "Implementamos estándares internacionales de calidad"
-    },
-    {
-      icon: Users,
-      title: "Empoderamiento",
-      description: "Capacitamos a tu equipo para la autonomía tecnológica"
-    },
-    {
-      icon: Lightbulb,
-      title: "Creatividad práctica",
-      description: "Soluciones innovadoras adaptadas a tu realidad empresarial"
-    }
-  ];
-
-  return (
-    <section id="nosotros" className="py-20 bg-surface-light">
+  const values = [{
+    icon: Target,
+    title: "Transparencia",
+    description: "Procesos claros y comunicación directa en cada proyecto"
+  }, {
+    icon: Award,
+    title: "Mejores prácticas",
+    description: "Implementamos estándares internacionales de calidad"
+  }, {
+    icon: Users,
+    title: "Empoderamiento",
+    description: "Capacitamos a tu equipo para la autonomía tecnológica"
+  }, {
+    icon: Lightbulb,
+    title: "Creatividad práctica",
+    description: "Soluciones innovadoras adaptadas a tu realidad empresarial"
+  }];
+  return <section id="nosotros" className="py-20 bg-surface-light">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-text-primary mb-6">
             Nosotros
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Expertos en automatización empresarial con IA que transforman la manera de trabajar
-          </p>
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto">Expertos en automatización empresarial con IA que transforman la manera de trabajar. Somos expertos en diseño e implementación de flujos de automatización basados en Generative AI y agentes inteligentes. Adaptamos la tecnología más avanzada a las necesidades prácticas de tu empresa, logrando resultados concretos en optimización y automatización.</p>
         </div>
 
         {/* Main Content Grid */}
@@ -47,11 +37,7 @@ const AboutSection = () => {
             <div className="relative">
               <div className="w-96 h-96 rounded-3xl overflow-hidden shadow-hero bg-gradient-ai p-1">
                 <div className="w-full h-full rounded-3xl overflow-hidden bg-surface-card">
-                  <img 
-                    src={founderImage} 
-                    alt="Carlos Garrido - Fundador de Armonía Digital IA"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={founderImage} alt="Carlos Garrido - Fundador de Armonía Digital IA" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-gradient-ai text-white px-6 py-3 rounded-xl shadow-hero">
@@ -63,14 +49,7 @@ const AboutSection = () => {
           {/* Right side - Content */}
           <div className="space-y-8">
             {/* ¿Quiénes somos? */}
-            <div className="bg-surface-card rounded-2xl p-8 shadow-card">
-              <h3 className="text-2xl font-bold text-text-primary mb-6">
-                ¿Quiénes somos?
-              </h3>
-              <p className="text-text-secondary leading-relaxed text-lg">
-                Somos expertos en diseño e implementación de flujos de automatización basados en Generative AI y agentes inteligentes. Adaptamos la tecnología más avanzada a las necesidades prácticas de tu empresa, logrando resultados concretos en optimización y automatización.
-              </p>
-            </div>
+            
 
             {/* Conoce al Fundador */}
             <Card className="bg-surface-card border-0 shadow-card">
@@ -81,7 +60,7 @@ const AboutSection = () => {
                 <div className="space-y-6">
                   <div>
                     <h5 className="font-bold text-text-primary text-xl mb-2">Carlos Garrido</h5>
-                    <p className="text-primary font-medium">Economista & Especialista en Information Management</p>
+                    <p className="text-primary font-medium">Economista & Máster en Information Management</p>
                   </div>
                   
                   <div className="grid sm:grid-cols-2 gap-6">
@@ -126,19 +105,13 @@ const AboutSection = () => {
           <h3 className="text-3xl font-bold text-text-primary mb-6">
             Nuestros Valores
           </h3>
-          <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Los principios que guían cada proyecto y consultoría
-          </p>
+          
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, index) => {
-            const IconComponent = value.icon;
-            return (
-              <Card 
-                key={index} 
-                className="group hover:shadow-hero transition-all duration-smooth hover:-translate-y-2 border-0 bg-surface-card text-center"
-              >
+          const IconComponent = value.icon;
+          return <Card key={index} className="group hover:shadow-hero transition-all duration-smooth hover:-translate-y-2 border-0 bg-surface-card text-center">
                 <CardContent className="p-6">
                   <div className="mb-4">
                     <div className="mx-auto w-16 h-16 bg-gradient-ai rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-smooth">
@@ -152,13 +125,10 @@ const AboutSection = () => {
                     {value.description}
                   </p>
                 </CardContent>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
