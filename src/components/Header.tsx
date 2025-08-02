@@ -6,6 +6,25 @@ import armoniaLogo from "@/assets/armonia-digital-logo.jpg";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const headerHeight = 64; // Height of fixed header (h-16 = 64px)
+      const targetPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Close mobile menu if open
+    setIsOpen(false);
+  };
+
   const navItems = [
     { label: "Inicio", href: "#inicio" },
     { label: "Nosotros", href: "#nosotros" },
@@ -36,7 +55,8 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-text-secondary hover:text-primary transition-colors duration-smooth"
+                onClick={(e) => handleSmoothScroll(e, item.href)}
+                className="text-text-secondary hover:text-primary transition-colors duration-smooth cursor-pointer"
               >
                 {item.label}
               </a>
@@ -68,8 +88,8 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block text-text-secondary hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  className="block text-text-secondary hover:text-primary transition-colors cursor-pointer"
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
                 >
                   {item.label}
                 </a>
